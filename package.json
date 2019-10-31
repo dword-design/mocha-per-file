@@ -1,0 +1,27 @@
+{
+  "name": "mocha-per-file",
+  "version": "0.1.0",
+  "repository": "https://github.com/dword-design/mocha-per-file",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bin": {
+    "mocha-per-file": "./src/cli.js"
+  },
+  "scripts": {
+    "prepare": "dw-config-files",
+    "pretest": "install-self",
+    "test": "nyc --reporter lcov --reporter text mocha test/*/index.test.js"
+  },
+  "dependencies": {
+    "child-process-promise": "^2.2.1",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2"
+  },
+  "devDependencies": {
+    "@dword-design/config-files": "^1.0.5",
+    "expect": "^24.9.0",
+    "install-self": "dword-design/install-self#fork",
+    "nyc": "^14.1.1"
+  }
+}
