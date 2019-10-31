@@ -46,7 +46,7 @@ Write some tests:
 const expect = require('expect')
 
 // simple test
-module.exports = () => expect(1).toEqual(2)
+module.exports = () => expect(1).toEqual(1)
 
 // test with timeout
 module.exports = {
