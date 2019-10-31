@@ -1,8 +1,9 @@
 {
   "name": "mocha-per-file",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": "https://github.com/dword-design/mocha-per-file",
   "author": "Sebastian Landwehr <info@dword-design.de>",
+  "description": "This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.",
   "license": "MIT",
   "main": "src/index.js",
   "bin": {
@@ -12,9 +13,9 @@
     "src"
   ],
   "scripts": {
-    "prepare": "dw-config-files",
+    "prepare": "dw-config-files && mos",
     "pretest": "install-self",
-    "test": "nyc --reporter lcov --reporter text mocha test/*/index.test.js"
+    "test": "nyc --reporter lcov --reporter text mocha test/*/index.test.js && mos test"
   },
   "dependencies": {
     "child-process-promise": "^2.2.1",
@@ -25,6 +26,7 @@
     "@dword-design/config-files": "^1.0.5",
     "expect": "^24.9.0",
     "install-self": "dword-design/install-self#fork",
+    "mos": "dword-design/mos#fork/mos",
     "nyc": "^14.1.1"
   }
 }
