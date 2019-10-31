@@ -8,6 +8,9 @@
   "bin": {
     "mocha-per-file": "./src/cli.js"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "prepare": "dw-config-files",
     "pretest": "install-self",
