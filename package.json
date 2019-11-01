@@ -1,6 +1,6 @@
 {
   "name": "mocha-per-file",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "repository": "https://github.com/dword-design/mocha-per-file",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "description": "This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.",
