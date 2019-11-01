@@ -1,3 +1,10 @@
 const { spawn } = require('child-process-promise')
 
-module.exports = () => spawn('mocha', [require.resolve('./test'), ...process.argv.slice(2)], { stdio: 'inherit' })
+let args = process.argv.slice(2)
+const isChdir = args.includes('--chdir')
+
+if (isChdir) {
+  args = args.filter(arg => arg === '--chdir')
+}
+
+module.exports = () => spawn('mocha', [require.resolve('./test'), ...args], { stdio: 'inherit', env: { ...process.env, IS_CHDIR: isChdir } })

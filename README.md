@@ -53,6 +53,12 @@ module.exports = {
   it: expect(1).toEqual(2),
   timeout: 5000,
 }
+
+// test only this file
+module.exports = {
+  it: expect(1).toEqual(2),
+  only: true,
+}
 ```
 
 Call `mocha-per-file` in `npm test` in `package.json`:
@@ -78,6 +84,30 @@ api
 cli
   ✓ args
   ✓ options
+```
+
+## Changing directories
+
+It is possible to tell `mocha-per-file` to `chdir` into the directory of each test file when running the tests via the `--chdir` parameter:
+
+```json
+{
+  "scripts": {
+    "test": "mocha-per-file --chdir"
+  }
+}
+```
+
+This makes it much easier to work with local fixtures:
+
+```js
+// files.test.js
+
+const expect = require('expect')
+const { readFile } = require('fs-extra')
+
+// process.cwd() is now in the test directory
+module.exports = async () => expect(await readFile('foo.txt')).toEqual('foo')
 ```
 
 <!--@license()-->
