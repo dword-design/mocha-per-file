@@ -16,10 +16,7 @@ const rec = async (path = 'test') => {
       const itOrOnly = only ? it.only : it
       const test = itOrOnly(
         P.basename(subpath, '.test.js'),
-        () => process.env.IS_CHDIR
-          ? chdir(P.dirname(absolutePath), handler.length > 0 ? () => new Promise(resolve => handler(resolve)) : handler)
-          : handler,
-
+        process.env.IS_CHDIR === 'true' ? () => chdir(P.dirname(absolutePath), handler) : handler
       )
       if (timeout !== undefined) {
         test.timeout(timeout)
