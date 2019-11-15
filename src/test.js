@@ -3,7 +3,7 @@ const { lstatSync } = require('fs')
 const P = require('path')
 const chdir = require('chdir')
 
-const rec = async (path = 'test') => {
+const rec = async (path = process.env.TEST_FOLDER_NAME) => {
   (glob.sync('*', { cwd: path })).forEach(subpath => {
     const absolutePath = P.join(path, subpath)
     if (lstatSync(absolutePath).isDirectory()) {

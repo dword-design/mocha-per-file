@@ -71,6 +71,16 @@ Call `mocha-per-file` in `npm test` in `package.json`:
 }
 ```
 
+Or specify the directory to search for tests:
+
+```json
+{
+  "scripts": {
+    "test": "mocha-per-file special-tests"
+  }
+}
+```
+
 Run the tests:
 
 ```bash
@@ -107,7 +117,7 @@ const expect = require('expect')
 const { readFile } = require('fs-extra')
 
 // process.cwd() is now in the test directory
-module.exports = async () => expect(await readFile('foo.txt')).toEqual('foo')
+module.exports = async () => expect(await readFile('foo.txt', 'utf8')).toEqual('foo')
 ```
 
 <!--@license()-->
