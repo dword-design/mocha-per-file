@@ -1,22 +1,22 @@
-const glob = require('glob')
-const { lstatSync } = require('fs')
-const P = require('path')
-const chdir = require('chdir')
+import glob from 'glob-promise'
+import { lstatSync } from 'fs'
+import { join, resolve, dirname, basename } from 'path'
+import chdir from 'chdir'
 
 const rec = async (path = process.env.TEST_FOLDER_NAME) => {
-  (glob.sync('*', { cwd: path })).forEach(subpath => {
-    const absolutePath = P.join(path, subpath)
+  (await glob('*', { cwd: path })).forEach(subpath => {
+    const absolutePath = join(path, subpath)
     if (lstatSync(absolutePath).isDirectory()) {
-      describe(subpath, () => rec(absolutePath))
+      global.describe(subpath, () => rec(absolutePath))
     } else if (subpath.endsWith('.test.js')) {
-      const testModule = require(P.resolve(absolutePath))
+      const testModule = require(resolve(absolutePath))
       const handler = typeof testModule === 'function' ? testModule : testModule.it
       const timeout = typeof testModule === 'function' ? undefined : testModule.timeout
       const only = typeof testModule === 'function' ? false : testModule.only
-      const itOrOnly = only ? it.only : it
+      const itOrOnly = only ? global.it.only : global.it
       const test = itOrOnly(
-        P.basename(subpath, '.test.js'),
-        process.env.IS_CHDIR === 'true' ? () => chdir(P.dirname(absolutePath), handler) : handler
+        basename(subpath, '.test.js'),
+        process.env.IS_CHDIR === 'true' ? () => chdir(dirname(absolutePath), handler) : handler
       )
       if (timeout !== undefined) {
         test.timeout(timeout)

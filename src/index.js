@@ -1,4 +1,5 @@
-const { spawn } = require('child-process-promise')
+import { spawn } from 'child_process'
+import resolveBin from 'resolve-bin'
 
 let args = process.argv.slice(2)
 const isChdir = args.includes('--chdir')
@@ -14,4 +15,8 @@ if (folderName !== '') {
   folderName = 'test'
 }
 
-module.exports = () => spawn('mocha', [require.resolve('./test'), ...args], { stdio: 'inherit', env: { ...process.env, IS_CHDIR: isChdir, TEST_FOLDER_NAME: folderName } })
+export default () => spawn(
+  resolveBin.sync('mocha'),
+  [require.resolve('./test'), ...args],
+  { stdio: 'inherit', env: { ...process.env, IS_CHDIR: isChdir, TEST_FOLDER_NAME: folderName } }
+)
