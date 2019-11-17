@@ -1,10 +1,10 @@
-import glob from 'glob-promise'
+import glob from 'glob'
 import { lstatSync } from 'fs'
 import { join, resolve, dirname, basename } from 'path'
 import chdir from 'chdir'
 
-const rec = async (path = process.env.TEST_FOLDER_NAME) => {
-  (await glob('*', { cwd: path })).forEach(subpath => {
+const rec = (path = process.env.TEST_FOLDER_NAME) => {
+  glob.sync('*', { cwd: path }).forEach(subpath => {
     const absolutePath = join(path, subpath)
     if (lstatSync(absolutePath).isDirectory()) {
       global.describe(subpath, () => rec(absolutePath))
