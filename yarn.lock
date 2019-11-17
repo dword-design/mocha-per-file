@@ -755,9 +755,9 @@
     "@dword-design/base" "^1.0.0"
 
 "@dword-design/base@^1.0.0":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-1.1.5.tgz#0b6a994b32e5fcae0f59199bb3b8b834dc96307b"
-  integrity sha512-JjIErG/7X2oKTtracAoB16AipHhDYA1P1B7Sovh2Thv4qi24J3WHqdel5xCvVudh70Jh6N7JxNrey+2RccQzVQ==
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-1.1.6.tgz#388b0426ead10cc94d1c6656697dbdca7ccb5bcd"
+  integrity sha512-iEhz3OxLXzZVkmT6qeq2ypoTFf5o8CYsUUmN8ChWBA2GR6GHcO4r9tjkS7j3FfapyCGzBaa66BmITBUE2igQLw==
   dependencies:
     "@babel/cli" "^7.6.4"
     "@babel/core" "^7.6.4"
@@ -773,7 +773,7 @@
     glob-promise "^3.4.0"
     install-self dword-design/install-self#fork
     make-cli "^1.0.9"
-    mocha-per-file "^1.1.4"
+    mocha-per-file "^1.2.2"
     mos dword-design/mos#fork/mos
     nyc "^14.1.1"
     pre-commit "^1.2.2"
@@ -3718,13 +3718,13 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha-per-file@^1.1.4:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/mocha-per-file/-/mocha-per-file-1.2.1.tgz#27462014694b3ae6eb993191b0e53f247f70ea4f"
-  integrity sha512-YCpHq551ybepV9JXA5VHzDJVUkl4+O4yu/IXBhC8A2KY7EH0xPbwK/OU1+uGrHE0FZD7W+xZ9a7MFpbTNWBvRw==
+mocha-per-file@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/mocha-per-file/-/mocha-per-file-1.2.2.tgz#0d4dd08187d6a8fe78efe5532e877c6b75f44c6e"
+  integrity sha512-RFdvnRntVI4T98Q09I09kg8U1kWN4uy9LM6MZguBzC8s8y7qESluP4npJYPfbm1D9Cn7pJf4fGL4N/0M8MEhnA==
   dependencies:
     chdir dword-design/node-chdir#fork
-    glob-promise "^3.4.0"
+    glob "^7.1.6"
     mocha "^6.2.2"
 
 mocha@^6.2.2:
