@@ -39,7 +39,7 @@
     "mocha": "^6.2.2"
   },
   "devDependencies": {
-    "@dword-design/base-node": "^0.4.4",
+    "@dword-design/base-node": "^1.0.0",
     "expect": "^24.9.0",
     "output-files": "^1.1.7",
     "resolve-bin": "^0.4.0",
