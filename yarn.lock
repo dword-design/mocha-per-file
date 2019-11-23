@@ -747,7 +747,7 @@
     babel-plugin-module-resolver "^3.2.0"
     babel-plugin-transform-imports "^2.0.0"
 
-"@dword-design/base-node@^0.4.4":
+"@dword-design/base-node@0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@dword-design/base-node/-/base-node-0.4.4.tgz#97644f7b3316ffcdbfbc8cbcb1f207ecdda43efd"
   integrity sha512-ngWTk6I45a95dS+ttRabJ6AetWAj5VVxO4J02UOP+gBFqWq5W2eNaodx7T9XPZJ+A/eTH7o/Rp3iyH7MRE2iTw==
@@ -2325,7 +2325,7 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-expect@^24.9.0:
+expect@24.9.0, expect@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/expect/-/expect-24.9.0.tgz#b75165b4817074fa4a157794f46fe9f1ba15b6ca"
   integrity sha512-wvVAx8XIol3Z5m9zvZXiyZOQ+sRJqNTIm6sGjdWlaZIeupQGO3WbYI+15D/AmEwZywL6wtJkbAbJtzkOfBuR0Q==
@@ -4333,7 +4333,7 @@ osenv@^0.1.0, osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-output-files@^1.1.7:
+output-files@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/output-files/-/output-files-1.1.7.tgz#f0bf5ad0dcf81bb0e1fcc4bd34e7bce0b99a4ec6"
   integrity sha512-35mYYRgvsLPTTnFobFWgsSsGYUKcb/9iwn+nlU3IKCC01QjQ4FvLikCKvQMbQRJzT10HEpfrGDjcecaCaSel5g==
@@ -4942,7 +4942,7 @@ reserved-words@^0.1.1:
   resolved "https://registry.yarnpkg.com/reserved-words/-/reserved-words-0.1.2.tgz#00a0940f98cd501aeaaac316411d9adc52b31ab1"
   integrity sha1-AKCUD5jNUBrqqsMWQR2a3FKzGrE=
 
-resolve-bin@^0.4.0:
+resolve-bin@0.4.0, resolve-bin@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/resolve-bin/-/resolve-bin-0.4.0.tgz#47132249891101afb19991fe937cb0a5f072e5d9"
   integrity sha1-RxMiSYkRAa+xmZH+k3ywpfBy5dk=
@@ -5960,7 +5960,7 @@ widest-line@^1.0.0:
   dependencies:
     string-width "^1.0.1"
 
-with-local-tmp-dir@^2.2.0:
+with-local-tmp-dir@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/with-local-tmp-dir/-/with-local-tmp-dir-2.2.0.tgz#5a9f76a45d4fca3d24fd84496738ae7d09759c51"
   integrity sha512-Tlthym0miaxTXld4GQZ6XglZZATZ/xO5+lFR16iEMEs7GjLyK2ktzBp8R8zO4lWbeUsszHxDn0xxV37UD+DOMg==
