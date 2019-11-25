@@ -1,26 +1,47 @@
-<!--@h1([pkg.name])-->
-# mocha-per-file
-<!--/@-->
+<!-- TITLE/ -->
 
-<!--@shields('npm', 'travis', 'coveralls', 'deps')-->
-[![npm version](https://img.shields.io/npm/v/mocha-per-file.svg)](https://www.npmjs.com/package/mocha-per-file) [![Build Status](https://img.shields.io/travis/dword-design/mocha-per-file/master.svg)](https://travis-ci.org/dword-design/mocha-per-file) [![Coverage Status](https://img.shields.io/coveralls/dword-design/mocha-per-file/master.svg)](https://coveralls.io/r/dword-design/mocha-per-file?branch=master) [![dependency status](https://img.shields.io/david/dword-design/mocha-per-file.svg)](https://david-dm.org/dword-design/mocha-per-file)
-<!--/@-->
+<h1>mocha-per-file</h1>
 
-<!--@pkg.description-->
-This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per \*.test.js file.
-<!--/@-->
+<!-- /TITLE -->
 
-<!--@installation()-->
-## Installation
 
-```sh
-# via NPM
-npm install --save mocha-per-file
+<!-- BADGES/ -->
 
-# via Yarn
-yarn add mocha-per-file
-```
-<!--/@-->
+<span class="badge-npmversion"><a href="https://npmjs.org/package/mocha-per-file" title="View this project on NPM"><img src="https://img.shields.io/npm/v/mocha-per-file.svg" alt="NPM version" /></a></span>
+<span class="badge-travisci"><a href="http://travis-ci.org/dword-design/mocha-per-file" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/dword-design/mocha-per-file/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-coveralls"><a href="https://coveralls.io/r/dword-design/mocha-per-file" title="View this project's coverage on Coveralls"><img src="https://img.shields.io/coveralls/dword-design/mocha-per-file.svg" alt="Coveralls Coverage Status" /></a></span>
+<span class="badge-daviddm"><a href="https://david-dm.org/dword-design/mocha-per-file" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/dword-design/mocha-per-file.svg" alt="Dependency Status" /></a></span>
+<span class="badge-shields"><a href="https://img.shields.io/badge/renovate-enabled-brightgreen.svg"><img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" /></a></span>
+
+<!-- /BADGES -->
+
+
+<!-- DESCRIPTION/ -->
+
+This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.
+
+<!-- /DESCRIPTION -->
+
+
+<!-- INSTALL/ -->
+
+<h2>Install</h2>
+
+<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+<h4>Install Globally</h4>
+<ul>
+<li>Install: <code>npm install --global mocha-per-file</code></li>
+<li>Executable: <code>mocha-per-file</code></li>
+</ul>
+<h4>Install Locally</h4>
+<ul>
+<li>Install: <code>npm install --save mocha-per-file</code></li>
+<li>Executable: <code>npx mocha-per-file</code></li>
+<li>Require: <code>require('mocha-per-file')</code></li>
+</ul>
+
+<!-- /INSTALL -->
+
 
 ## Usage
 
@@ -120,8 +141,16 @@ const { readFile } = require('fs-extra')
 module.exports = async () => expect(await readFile('foo.txt', 'utf8')).toEqual('foo')
 ```
 
-<!--@license()-->
-## License
+<!-- LICENSE/ -->
 
-MIT © Sebastian Landwehr
-<!--/@-->
+<h2>License</h2>
+
+Unless stated otherwise all works are:
+
+<ul><li>Copyright &copy; Sebastian Landwehr</li></ul>
+
+and licensed under:
+
+<ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
+
+<!-- /LICENSE -->
