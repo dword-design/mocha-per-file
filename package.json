@@ -1,17 +1,7 @@
 {
   "name": "mocha-per-file",
   "version": "1.2.5",
-  "repository": "dword-design/mocha-per-file",
-  "author": "Sebastian Landwehr <info@dword-design.de>",
   "description": "This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "bin": {
-    "mocha-per-file": "./dist/cli.js"
-  },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "chdir",
     "cli",
@@ -21,23 +11,40 @@
     "file",
     "folder",
     "it",
-    "mocha",
     "manage",
-    "recursive",
+    "mocha",
     "organize",
+    "recursive",
     "test",
     "testing",
     "tree"
   ],
+  "bugs": {
+    "url": "https://github.com/dword-design/mocha-per-file/issues"
+  },
+  "repository": "dword-design/mocha-per-file",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "contributors": [
+    "dword-design (http://www.dword-design.de)",
+    "Renovate Bot (http://renovatebot.com)"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "bin": {
+    "mocha-per-file": "./dist/cli.js"
+  },
   "scripts": {
-    "prepare": "base-node prepare",
+    "prepublishOnly": "base-node build",
+    "start": "base-node start",
     "test": "base-node test"
   },
   "dependencies": {
     "chdir": "dword-design/node-chdir#fork",
     "glob": "^7.1.6",
-    "mocha": "^6.2.2",
-    "resolve-bin": "^0.4.0"
+    "mocha": "^6.2.2"
   },
   "devDependencies": {
     "@dword-design/base-node": "^1.0.0",
@@ -45,12 +52,5 @@
     "output-files": "^1.1.7",
     "with-local-tmp-dir": "^2.2.0"
   },
-  "maintainers": [],
-  "contributors": [
-    "dword-design (http://www.dword-design.de)",
-    "Renovate Bot (http://renovatebot.com)"
-  ],
-  "bugs": {
-    "url": "https://github.com/dword-design/mocha-per-file/issues"
-  }
+  "maintainers": []
 }
