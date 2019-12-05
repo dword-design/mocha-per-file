@@ -45,7 +45,7 @@ This CLI tool allows to organize mocha tests in files and directories. It works 
 
 ## Usage
 
-Setup the directory structure:
+### Setup the directory structure
 
 ```bash
 |- src
@@ -59,7 +59,7 @@ Setup the directory structure:
       |- options.test.js
 ```
 
-Write some tests:
+### Writing the tests
 
 ```js
 // empty-input.test.js
@@ -82,8 +82,8 @@ module.exports = {
 }
 ```
 
-Call `mocha-per-file` in `npm test` in `package.json`:
-
+### Calling mocha-per-file
+In `npm test` in `package.json`:
 ```json
 {
   "scripts": {
@@ -92,20 +92,9 @@ Call `mocha-per-file` in `npm test` in `package.json`:
 }
 ```
 
-Or specify the directory to search for tests:
-
-```json
-{
-  "scripts": {
-    "test": "mocha-per-file special-tests"
-  }
-}
-```
-
-Run the tests:
-
+Via bash:
 ```bash
-$ npm test
+$ npx mocha-per-file
 
 api
   ✓ empty-input
@@ -117,16 +106,34 @@ cli
   ✓ options
 ```
 
-## Changing directories
+### Specifying the root directory to search for tests:
 
+```bash
+$ npx mocha-per-file --path special-tests
+```
+
+### Passing parameters to mocha
+Some mocha parameters are also supported and can be passed through. For information on this, check out `mocha-per-file --help`.
+
+```bash
+$ npx mocha-per-file --require @babel/register
+
+```
+
+If more are needed feel free to open an issue or a PR! 😃
+
+### Execute only some tests
+You can execute only some of the tests by providing a filename or glob. Please mind that the path has to be relative to the specified test folder.
+```bash
+$ npx mocha-per-file empty-input.test.js
+$ npx mocha-per-file api/*
+```
+
+### Changing directories
 It is possible to tell `mocha-per-file` to `chdir` into the directory of each test file when running the tests via the `--chdir` parameter:
 
-```json
-{
-  "scripts": {
-    "test": "mocha-per-file --chdir"
-  }
-}
+```bash
+$ npx mocha-per-file --chdir
 ```
 
 This makes it much easier to work with local fixtures:
@@ -139,6 +146,21 @@ const { readFile } = require('fs-extra')
 
 // process.cwd() is now in the test directory
 module.exports = async () => expect(await readFile('foo.txt', 'utf8')).toEqual('foo')
+```
+
+### Using with-local-tmp-dir
+[with-local-tmp-dir](https://www.npmjs.com/package/with-local-tmp-dir) is a package that allows us to create a temporary folder inside a given directory and remove it after having finished a callback. This makes it the perfect tool to run file-based tests. The following snippet illustrates this:
+
+```js
+// files.test.js
+
+const expect = require('expect')
+const { writeFile, readFile } = require('fs-extra')
+
+module.exports = () => withLocalTmpDir(async () => {
+  await writeFile('foo.txt', 'foo')
+  expect(await readFile('foo.txt', 'utf8')).toEqual('foo')
+})
 ```
 
 <!-- LICENSE/ -->

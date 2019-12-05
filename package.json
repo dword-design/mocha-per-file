@@ -44,6 +44,8 @@
   "dependencies": {
     "chdir": "dword-design/node-chdir#fork",
     "glob": "^7.1.6",
+    "make-cli": "^1.0.12",
+    "minimatch": "^3.0.4",
     "mocha": "^6.2.2"
   },
   "devDependencies": {
