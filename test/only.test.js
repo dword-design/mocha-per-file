@@ -3,7 +3,6 @@ import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import outputFiles from 'output-files'
 import { endent } from '@functions'
-import resolveBin from 'resolve-bin'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFiles({
@@ -17,7 +16,7 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
       `,
     },
   })
-  const { stdout } = await spawn(resolveBin.sync('mocha-per-file'), [], { capture: ['stdout'] })
+  const { stdout } = await spawn('mocha-per-file', [], { capture: ['stdout'] })
   expect(stdout).toMatch(/^\n\n  ✓ foo\n\n  1 passing \(.*?\)\n\n$/)
 })
 
