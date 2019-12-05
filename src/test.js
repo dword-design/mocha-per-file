@@ -3,7 +3,7 @@ import { lstatSync } from 'fs'
 import { join, resolve, dirname, basename } from 'path'
 import chdir from 'chdir'
 
-const rec = (path = process.env.TEST_FOLDER_NAME) => {
+const rec = (path = process.env.MOCHA_PER_FILE_TEST_FOLDER_NAME) => {
   glob.sync('*', { cwd: path }).forEach(subpath => {
     const absolutePath = join(path, subpath)
     if (lstatSync(absolutePath).isDirectory()) {
@@ -16,7 +16,7 @@ const rec = (path = process.env.TEST_FOLDER_NAME) => {
       const itOrOnly = only ? global.it.only : global.it
       const test = itOrOnly(
         basename(subpath, '.test.js'),
-        process.env.IS_CHDIR === 'true' ? () => chdir(dirname(absolutePath), handler) : handler
+        process.env.MOCHA_PER_FILE_IS_CHDIR === 'true' ? () => chdir(dirname(absolutePath), handler) : handler
       )
       if (timeout !== undefined) {
         test.timeout(timeout)

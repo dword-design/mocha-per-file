@@ -14,4 +14,4 @@ if (folderName !== '') {
   folderName = 'test'
 }
 
-export default () => spawn('mocha', [require.resolve('./test'), ...args], { stdio: 'inherit', env: { ...process.env, IS_CHDIR: isChdir, TEST_FOLDER_NAME: folderName } })
+export default () => spawn('mocha', [require.resolve('./test'), ...args], { stdio: 'inherit', env: { ...process.env, MOCHA_PER_FILE_IS_CHDIR: isChdir, MOCHA_PER_FILE_TEST_FOLDER_NAME: folderName } })
