@@ -135,7 +135,7 @@ This makes it much easier to work with local fixtures:
 // files.test.js
 
 const expect = require('expect')
-const { readFile } = require('fs-extra')
+const { readFile } = require('fs-extra')
 
 // process.cwd() is now in the test directory
 module.exports = async () => expect(await readFile('foo.txt', 'utf8')).toEqual('foo')
