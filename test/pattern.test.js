@@ -1,4 +1,4 @@
-import { spawn } from 'child_process'
+import { spawn } from 'child-process-promise'
 import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import outputFiles from 'output-files'

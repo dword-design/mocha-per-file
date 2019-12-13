@@ -25,10 +25,6 @@
   "repository": "dword-design/mocha-per-file",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
-  "contributors": [
-    "dword-design (http://www.dword-design.de)",
-    "Renovate Bot (http://renovatebot.com)"
-  ],
   "files": [
     "dist"
   ],
@@ -37,22 +33,29 @@
     "mocha-per-file": "./dist/cli.js"
   },
   "scripts": {
-    "prepublishOnly": "base-node build",
-    "start": "base-node start",
-    "test": "base-node test"
+    "prepublishOnly": "base build",
+    "start": "base start",
+    "test": "base test"
   },
   "dependencies": {
     "chdir": "dword-design/node-chdir#fork",
+    "child-process-promise": "^2.2.1",
+    "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "make-cli": "^1.0.12",
     "minimatch": "^3.0.4",
     "mocha": "^6.2.2"
   },
   "devDependencies": {
-    "@dword-design/base-node": "^1.0.0",
+    "@dword-design/base": "^3.4.4",
+    "@dword-design/functions": "^2.2.2",
     "expect": "^24.9.0",
     "output-files": "^1.1.7",
     "with-local-tmp-dir": "^2.2.0"
   },
+  "contributors": [
+    "dword-design (http://www.dword-design.de)",
+    "Renovate Bot (http://renovatebot.com)"
+  ],
   "maintainers": []
 }
