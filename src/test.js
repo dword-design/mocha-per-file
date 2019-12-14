@@ -1,5 +1,5 @@
 import glob from 'glob'
-import { lstatSync } from 'fs'
+import { lstatSync } from 'fs-extra'
 import { join, resolve, dirname, basename, relative } from 'path'
 import chdir from 'chdir'
 import minimatch from 'minimatch'

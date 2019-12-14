@@ -1,7 +1,7 @@
-import { spawn } from 'child_process'
+import { spawn } from 'child-process-promise'
 import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
-import { outputFile } from 'fs'
+import { outputFile } from 'fs-extra'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('test/foo.test.js', 'module.exports = () => new Promise(resolve => setTimeout(resolve, 500))')
