@@ -19,9 +19,6 @@
     "testing",
     "tree"
   ],
-  "bugs": {
-    "url": "https://github.com/dword-design/mocha-per-file/issues"
-  },
   "repository": "dword-design/mocha-per-file",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
@@ -47,15 +44,10 @@
     "mocha": "^6.2.2"
   },
   "devDependencies": {
-    "@dword-design/base": "^3.4.4",
+    "@dword-design/base": "^4.0.0",
     "@dword-design/functions": "^2.2.2",
     "expect": "^24.9.0",
     "output-files": "^1.1.7",
     "with-local-tmp-dir": "^2.2.0"
-  },
-  "contributors": [
-    "dword-design (http://www.dword-design.de)",
-    "Renovate Bot (http://renovatebot.com)"
-  ],
-  "maintainers": []
+  }
 }

@@ -37,7 +37,8 @@ This CLI tool allows to organize mocha tests in files and directories. It works 
 <ul>
 <li>Install: <code>npm install --save mocha-per-file</code></li>
 <li>Executable: <code>npx mocha-per-file</code></li>
-<li>Require: <code>require('mocha-per-file')</code></li>
+<li>Import: <code>import * as pkg from ('mocha-per-file')</code></li>
+<li>Require: <code>const pkg = require('mocha-per-file')</code></li>
 </ul>
 
 <!-- /INSTALL -->

@@ -4,7 +4,7 @@ import withLocalTmpDir from 'with-local-tmp-dir'
 import { outputFile } from 'fs-extra'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
-  await outputFile('test/foo.test.js', 'module.exports = () => new Promise(resolve => setTimeout(resolve, 500))')
+  await outputFile('test/foo.test.js', 'module.exports = () => new Promise(resolve => setTimeout(resolve, 200))')
   let stdout
   try {
     await spawn('mocha-per-file', ['--timeout', 100], { capture: ['stdout'] })
