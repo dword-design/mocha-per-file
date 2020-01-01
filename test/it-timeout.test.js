@@ -7,11 +7,16 @@ import { endent } from '@dword-design/functions'
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('test/foo.test.js', endent`
     module.exports = {
-      timeout: 3000,
-      it: done => setTimeout(done, 2100),
+      timeout: 100,
+      it: done => setTimeout(done, 200),
     }
   `)
-  const { stdout } = await spawn('mocha-per-file', [], { capture: ['stdout'] })
-  expect(stdout).toMatch(/^\n\n  ✓ foo.*?\n\n  1 passing \(.*?\)\n\n$/)
+  let stdout
+  try {
+    await spawn('mocha-per-file', [], { capture: ['stdout'] })
+  } catch (error) {
+    stdout = error.stdout
+  }
+  expect(stdout).toMatch('Error: Timeout of 100ms exceeded.')
 })
 export const timeout = 5000
