@@ -43,7 +43,7 @@ export default () => makeCli({
             MOCHA_PER_FILE_PATTERN: pattern,
             MOCHA_PER_FILE_IS_CHDIR: isChdir,
           },
-        }
+        },
       )
     } catch (error) {
       if (error.name !== 'ChildProcessError') {
