@@ -25,7 +25,7 @@ const rec = (path = globalPath) => glob.sync('*', { cwd: path })
       const itOrOnly = only ? global.it.only : global.it
       const test = itOrOnly(
         basename(subpath, '.test.js'),
-        process.env.MOCHA_PER_FILE_IS_CHDIR === 'true' ? () => chdir(dirname(absolutePath), handler) : handler
+        process.env.MOCHA_PER_FILE_IS_CHDIR === 'true' ? () => chdir(dirname(absolutePath), handler) : handler,
       )
       if (timeout !== undefined) {
         test.timeout(timeout)
