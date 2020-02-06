@@ -1,10 +1,9 @@
 import { spawn } from 'child-process-promise'
-import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import outputFiles from 'output-files'
 import { endent } from '@dword-design/functions'
 
-export const it = () => withLocalTmpDir(__dirname, async () => {
+export default () => withLocalTmpDir(__dirname, async () => {
   await outputFiles({
     test: {
       'bar.test.js': 'module.exports = () => {}',
@@ -20,4 +19,3 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
   expect(stdout).toMatch(/^\n\n  ✓ foo\n\n  1 passing \(.*?\)\n\n$/)
 })
 
-export const timeout = 5000

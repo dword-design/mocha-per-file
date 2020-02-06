@@ -1,9 +1,8 @@
 import { spawn } from 'child-process-promise'
-import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import outputFiles from 'output-files'
 
-export const it = async () => {
+export default async () => {
 
   await withLocalTmpDir(__dirname, async () => {
     await outputFiles({
@@ -30,5 +29,3 @@ export const it = async () => {
     expect(stdout).toMatch(/^\n\n  a\n    ✓ foo.*?\n\n\n  1 passing \(.*?\)\n\n$/)
   })
 }
-
-export const timeout = 10000

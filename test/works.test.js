@@ -1,10 +1,9 @@
 import { spawn } from 'child-process-promise'
-import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import outputFiles from 'output-files'
 import { endent } from '@dword-design/functions'
 
-export const it = () => withLocalTmpDir(__dirname, async () => {
+export default () => withLocalTmpDir(__dirname, async () => {
   await outputFiles({
     test: {
       a: {
@@ -21,5 +20,3 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
   const { stdout } = await spawn('mocha-per-file', [], { capture: ['stdout'] })
   expect(stdout).toMatch(/^\n\n  a\n    ✓ bar\n    ✓ foo\n\n  b\n    ✓ baz\n\n\n  3 passing \(.*?\)\n\n$/)
 })
-
-export const timeout = 5000
