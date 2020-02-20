@@ -30,14 +30,16 @@
     "dist"
   ],
   "scripts": {
+    "commit": "base commit",
     "depgraph": "base depgraph",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
+    "release": "base release",
     "test": "base test"
   },
   "dependencies": {
     "chdir": "dword-design/node-chdir#fork",
-    "child-process-promise": "^2.2.1",
+    "execa": "^4.0.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "make-cli": "^1.0.12",
