@@ -3,17 +3,38 @@ import withLocalTmpDir from 'with-local-tmp-dir'
 import { outputFile } from 'fs-extra'
 import { endent } from '@dword-design/functions'
 import outputFiles from 'output-files'
+import escape from 'escape-string-regexp'
+import P from 'path'
 
 export default {
   chdir: () => withLocalTmpDir(async () => {
     await outputFile('test/a/foo.test.js', 'module.exports = () => console.log(process.cwd())')
     const { all } = await execa.command('mocha-per-file --chdir', { all: true })
-    expect(all).toMatch(/^\n\n  a\n.*?(\/|\\)test(\/|\\)a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+      ${escape(P.resolve('test', 'a'))}
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   done: () => withLocalTmpDir(async () => {
     await outputFile('test/a/foo.test.js', 'module.exports = done => setTimeout(done, 100)')
     const { all } = await execa.command('mocha-per-file', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   fails: () => withLocalTmpDir(async () => {
     await outputFile('test/a/foo.test.js', endent`
@@ -27,7 +48,23 @@ export default {
     } catch (error) {
       all = error.all
     }
-    expect(all).toMatch(/^\n\n  a\n    1\) foo\n\n\n  0 passing \(.*?\)\n  1 failing\n\n  1\) a\n       foo:\n     Error: expect\(received\)\.toEqual\(expected\) \/\/ deep equality\n\nExpected: 2\nReceived: 1/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          1\\) foo
+      
+      
+        0 passing \\(.*?\\)
+        1 failing
+
+        1\\) a
+             foo:
+           Error: expect\\(received\\)\\.toEqual\\(expected\\) // deep equality
+      
+      Expected: 2
+      Received: 1
+    `))
   }),
   'it timeout': () => withLocalTmpDir(async () => {
     await outputFile('test/foo.test.js', endent`
@@ -62,7 +99,16 @@ export default {
   path: () => withLocalTmpDir(async () => {
     await outputFile('test2/a/foo.test.js', 'module.exports = () => {}')
     const { all } = await execa.command('mocha-per-file --path test2', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   'pattern: with path': () => withLocalTmpDir(async () => {
     await outputFiles({
@@ -72,7 +118,16 @@ export default {
       },
     })
     const { all } = await execa.command('mocha-per-file --path test2 a/foo.test.js', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   'pattern: same folder': () => withLocalTmpDir(async () => {
     await outputFiles({
@@ -82,7 +137,16 @@ export default {
       },
     })
     const { all } = await execa.command('mocha-per-file a/foo.test.js', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   'pattern: different folder': () => withLocalTmpDir(async () => {
     await outputFiles({
@@ -95,7 +159,16 @@ export default {
       },
     })
     const { all } = await execa.command('mocha-per-file a/foo.test.js', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . foo.*?\n\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . foo( \\(.*?\\))?
+      
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   reporter: () => withLocalTmpDir(async () => {
     await outputFile('test/foo.test.js', 'module.exports = () => {}')
@@ -108,7 +181,15 @@ export default {
       'setup.js': 'console.log(\'test\')',
     })
     const { all } = await execa.command('mocha-per-file --require setup.js', { all: true })
-    expect(all).toMatch(/^test\n\n\n  . foo.*?\n\n  1 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^test
+      
+      
+        . foo( \\(.*?\\))?
+      
+        1 passing \\(.*?\\)
+      $
+    `))
   }),
   timeout: () => withLocalTmpDir(async () => {
     await outputFile('test/foo.test.js', 'module.exports = () => new Promise(resolve => setTimeout(resolve, 200))')
@@ -135,6 +216,19 @@ export default {
       },
     })
     const { all } = await execa.command('mocha-per-file', { all: true })
-    expect(all).toMatch(/^\n\n  a\n    . bar\n    . foo\n\n  b\n    . baz\n\n\n  3 passing \(.*?\)\n$/)
+    expect(all).toMatch(new RegExp(endent`
+      ^
+      
+        a
+          . bar( \\(.*?\\))?
+          . foo( \\(.*?\\))?
+      
+        b
+          . baz( \\(.*?\\))?
+      
+      
+        3 passing \\(.*?\\)
+      $
+    `))
   }),
 }
