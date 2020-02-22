@@ -1,4 +1,4 @@
-import { spawn } from 'child-process-promise'
+import execa from 'execa'
 import makeCli from 'make-cli'
 
 export default () => makeCli({
@@ -27,7 +27,7 @@ export default () => makeCli({
   ],
   action: async (pattern = '**', { path = 'test', chdir: isChdir, require: requireModule, timeout, reporter }) => {
     try {
-      await spawn(
+      await execa(
         'mocha',
         [
           require.resolve('./test'),
@@ -46,9 +46,6 @@ export default () => makeCli({
         },
       )
     } catch (error) {
-      if (error.name !== 'ChildProcessError') {
-        throw error
-      }
       process.exit(1)
     }
   },

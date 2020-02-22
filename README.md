@@ -1,48 +1,34 @@
 <!-- TITLE/ -->
-
-<h1>mocha-per-file</h1>
-
+# mocha-per-file
 <!-- /TITLE -->
 
-
 <!-- BADGES/ -->
+[![NPM version](https://img.shields.io/npm/v/mocha-per-file.svg)](https://npmjs.org/package/mocha-per-file)
+![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
 
-<span class="badge-npmversion"><a href="https://npmjs.org/package/mocha-per-file" title="View this project on NPM"><img src="https://img.shields.io/npm/v/mocha-per-file.svg" alt="NPM version" /></a></span>
-<span class="badge-travisci"><a href="http://travis-ci.org/dword-design/mocha-per-file" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/dword-design/mocha-per-file/master.svg" alt="Travis CI Build Status" /></a></span>
-<span class="badge-coveralls"><a href="https://coveralls.io/r/dword-design/mocha-per-file" title="View this project's coverage on Coveralls"><img src="https://img.shields.io/coveralls/dword-design/mocha-per-file.svg" alt="Coveralls Coverage Status" /></a></span>
-<span class="badge-daviddm"><a href="https://david-dm.org/dword-design/mocha-per-file" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/dword-design/mocha-per-file.svg" alt="Dependency Status" /></a></span>
-<span class="badge-shields"><a href="https://img.shields.io/badge/renovate-enabled-brightgreen.svg"><img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" /></a></span>
+[![Build status](https://img.shields.io/github/workflow/status/dword-design/mocha-per-file/build)](https://github.com/dword-design/mocha-per-file/actions)
+[![Coverage status](https://img.shields.io/coveralls/dword-design/mocha-per-file)](https://coveralls.io/github/dword-design/mocha-per-file)
+[![Dependency status](https://img.shields.io/david/dword-design/mocha-per-file)](https://david-dm.org/dword-design/mocha-per-file)
+![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen)
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dword-design/mocha-per-file)
 <!-- /BADGES -->
 
-
 <!-- DESCRIPTION/ -->
-
 This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.
-
 <!-- /DESCRIPTION -->
 
-
 <!-- INSTALL/ -->
+# Install
 
-<h2>Install</h2>
+```bash
+# NPM
+$ npm install mocha-per-file
 
-<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
-<h4>Install Globally</h4>
-<ul>
-<li>Install: <code>npm install --global mocha-per-file</code></li>
-<li>Executable: <code>mocha-per-file</code></li>
-</ul>
-<h4>Install Locally</h4>
-<ul>
-<li>Install: <code>npm install --save mocha-per-file</code></li>
-<li>Executable: <code>npx mocha-per-file</code></li>
-<li>Import: <code>import * as pkg from ('mocha-per-file')</code></li>
-<li>Require: <code>const pkg = require('mocha-per-file')</code></li>
-</ul>
-
+# Yarn
+$ yarn add mocha-per-file
+```
 <!-- /INSTALL -->
-
 
 ## Usage
 
@@ -165,15 +151,13 @@ module.exports = () => withLocalTmpDir(async () => {
 ```
 
 <!-- LICENSE/ -->
-
-<h2>License</h2>
+# License
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; Sebastian Landwehr</li></ul>
+Copyright &copy; Sebastian Landwehr <info@dword-design.de>
 
 and licensed under:
 
-<ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
-
+[MIT License](https://opensource.org/licenses/MIT)
 <!-- /LICENSE -->
