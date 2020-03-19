@@ -40,7 +40,7 @@
   "dependencies": {
     "chdir": "dword-design/node-chdir#fork",
     "execa": "^4.0.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "make-cli": "^1.0.12",
     "minimatch": "^3.0.4",
