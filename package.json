@@ -31,17 +31,17 @@
   ],
   "scripts": {
     "commit": "base commit",
-    "depgraph": "base depgraph",
+    "dev": "base dev",
+    "lint": "base lint",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
-    "release": "base release",
     "test": "base test"
   },
   "dependencies": {
-    "chdir": "dword-design/node-chdir#fork",
+    "@dword-design/chdir": "^1.0.0",
     "execa": "^4.0.0",
     "fs-extra": "^9.0.0",
-    "glob": "^7.1.6",
+    "globby": "^11.0.1",
     "make-cli": "^1.0.12",
     "minimatch": "^3.0.4",
     "mocha": "^7.0.0"
@@ -52,5 +52,8 @@
     "escape-string-regexp": "^2.0.0",
     "output-files": "^1.1.7",
     "with-local-tmp-dir": "^2.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
