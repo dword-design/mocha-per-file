@@ -1,6 +1,6 @@
 {
   "name": "mocha-per-file",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.",
   "keywords": [
     "chdir",

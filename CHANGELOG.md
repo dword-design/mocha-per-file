@@ -1,3 +1,11 @@
+## [2.0.8](https://github.com/dword-design/mocha-per-file/compare/v2.0.7...v2.0.8) (2020-07-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency escape-string-regexp to v4 ([f1b9cf9](https://github.com/dword-design/mocha-per-file/commit/f1b9cf9e34df61c04f2d5a9ea85964246dc363cc))
+* fixes after upgrades ([17a4664](https://github.com/dword-design/mocha-per-file/commit/17a4664a99c2c02c9c2bf4bcc83c75d66aa52465))
+
 ## [2.0.7](https://github.com/dword-design/mocha-per-file/compare/v2.0.6...v2.0.7) (2020-03-19)
 
 
