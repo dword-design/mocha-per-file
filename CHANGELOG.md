@@ -1,3 +1,10 @@
+## [2.0.10](https://github.com/dword-design/mocha-per-file/compare/v2.0.9...v2.0.10) (2020-12-02)
+
+
+### Bug Fixes
+
+* **config:** Update changed files ([359ea25](https://github.com/dword-design/mocha-per-file/commit/359ea25e564527bcfbe3159cd53ebcb7c55f8545))
+
 ## [2.0.9](https://github.com/dword-design/mocha-per-file/compare/v2.0.8...v2.0.9) (2020-08-26)
 
 
