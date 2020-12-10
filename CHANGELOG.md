@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/dword-design/mocha-per-file/compare/v2.0.11...v3.0.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mocha to v8 ([ff717ba](https://github.com/dword-design/mocha-per-file/commit/ff717baf15712b7da454606f2a5d02d9efc496a4))
+
+
+### Features
+
+* update mocha to v8 ([e7c633e](https://github.com/dword-design/mocha-per-file/commit/e7c633e8797aa5644303eb171b3ea5ce020c9e2b))
+
+
+### BREAKING CHANGES
+
+* update mocha to v8
+
 ## [2.0.11](https://github.com/dword-design/mocha-per-file/compare/v2.0.10...v2.0.11) (2020-12-10)
 
 
