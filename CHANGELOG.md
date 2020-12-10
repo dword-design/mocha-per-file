@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/dword-design/mocha-per-file/compare/v2.0.10...v2.0.11) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([98975d8](https://github.com/dword-design/mocha-per-file/commit/98975d84e3439bbc259b1da89fc2fffa4558bc1c))
+
 ## [2.0.10](https://github.com/dword-design/mocha-per-file/compare/v2.0.9...v2.0.10) (2020-12-02)
 
 
