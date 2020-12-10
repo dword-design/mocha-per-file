@@ -45,7 +45,7 @@
     "globby": "^11.0.1",
     "make-cli": "^1.0.12",
     "minimatch": "^3.0.4",
-    "mocha": "^7.0.0"
+    "mocha": "^8.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^6.0.0",
