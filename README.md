@@ -3,7 +3,7 @@
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-[![NPM version](https://img.shields.io/npm/v/mocha-per-file.svg)](https://npmjs.org/package/mocha-per-file)
+[![npm version](https://img.shields.io/npm/v/mocha-per-file.svg)](https://npmjs.org/package/mocha-per-file)
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
 [![Build status](https://github.com/dword-design/mocha-per-file/workflows/build/badge.svg)](https://github.com/dword-design/mocha-per-file/actions)
 [![Coverage status](https://img.shields.io/coveralls/dword-design/mocha-per-file)](https://coveralls.io/github/dword-design/mocha-per-file)
@@ -41,7 +41,7 @@ This CLI tool allows to organize mocha tests in files and directories. It works 
 ## Install
 
 ```bash
-# NPM
+# npm
 $ npm install mocha-per-file
 
 # Yarn
