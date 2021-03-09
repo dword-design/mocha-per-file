@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/dword-design/mocha-per-file/compare/v3.0.1...v3.0.2) (2021-03-09)
+
+
+### Bug Fixes
+
+* update changed files ([c2bf4bd](https://github.com/dword-design/mocha-per-file/commit/c2bf4bdec1e6b5f07f3d59d42844655fa6b02c18))
+
 ## [3.0.1](https://github.com/dword-design/mocha-per-file/compare/v3.0.0...v3.0.1) (2021-02-17)
 
 
