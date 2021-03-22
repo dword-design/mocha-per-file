@@ -18,7 +18,6 @@ export default () =>
           ],
           {
             env: {
-              ...process.env,
               MOCHA_PER_FILE_IS_CHDIR: options.chdir,
               MOCHA_PER_FILE_PATH: options.path,
               MOCHA_PER_FILE_PATTERN: pattern,
