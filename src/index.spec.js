@@ -13,6 +13,7 @@ export default {
         'test/a/foo.test.js',
         'module.exports = () => console.log(process.cwd())'
       )
+
       const output = await execa(require.resolve('./cli'), ['--chdir'], {
         all: true,
       })
@@ -36,6 +37,7 @@ export default {
         'test/a/foo.test.js',
         'module.exports = done => setTimeout(done, 100)'
       )
+
       const output = await execa(require.resolve('./cli'), { all: true })
       expect(output.all).toMatch(
         new RegExp(endent`
@@ -118,12 +120,14 @@ export default {
         `,
         },
       })
+
       const output = await execa(require.resolve('./cli'), { all: true })
       expect(output.all).toMatch(/^\n\n  . foo\n\n  1 passing \(.*?\)\n$/)
     }),
   path: () =>
     withLocalTmpDir(async () => {
       await outputFile('test2/a/foo.test.js', 'module.exports = () => {}')
+
       const output = await execa(
         require.resolve('./cli'),
         ['--path', 'test2'],
@@ -155,6 +159,7 @@ export default {
           'b/foo.test.js': 'module.exports = () => {}',
         },
       })
+
       const output = await execa(require.resolve('./cli'), ['a/foo.test.js'], {
         all: true,
       })
@@ -179,6 +184,7 @@ export default {
           'foo.test.js': 'module.exports = () => {}',
         },
       })
+
       const output = await execa(require.resolve('./cli'), ['a/foo.test.js'], {
         all: true,
       })
@@ -203,6 +209,7 @@ export default {
           'foo.test.js': 'module.exports = () => {}',
         },
       })
+
       const output = await execa(
         require.resolve('./cli'),
         ['--path', 'test2', 'a/foo.test.js'],
@@ -226,6 +233,7 @@ export default {
   reporter: () =>
     withLocalTmpDir(async () => {
       await outputFile('test/foo.test.js', 'module.exports = () => {}')
+
       const output = await execa(
         require.resolve('./cli'),
         ['--reporter', 'json'],
@@ -241,6 +249,7 @@ export default {
         'setup.js': "console.log('test')",
         'test/foo.test.js': 'module.exports = () => {}',
       })
+
       const output = await execa(
         require.resolve('./cli'),
         ['--require', 'setup.js'],
@@ -289,6 +298,7 @@ export default {
           'b/baz.test.js': 'module.exports = () => {}',
         },
       })
+
       const output = await execa(require.resolve('./cli'), { all: true })
       expect(output.all).toMatch(
         new RegExp(endent`
