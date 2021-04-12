@@ -1,3 +1,10 @@
+## [3.0.7](https://github.com/dword-design/mocha-per-file/compare/v3.0.6...v3.0.7) (2021-04-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#42](https://github.com/dword-design/mocha-per-file/issues/42)) ([1e926c7](https://github.com/dword-design/mocha-per-file/commit/1e926c72f8a15624909d8d4e02e3f11f39304428))
+
 ## [3.0.6](https://github.com/dword-design/mocha-per-file/compare/v3.0.5...v3.0.6) (2021-03-31)
 
 
