@@ -44,7 +44,7 @@
     "execa": "^5.0.0",
     "fs-extra": "^9.0.0",
     "globby": "^11.0.1",
-    "make-cli": "^1.0.12",
+    "make-cli": "^1.2.1",
     "minimatch": "^3.0.4",
     "mocha": "^8.0.0"
   },
