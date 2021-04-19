@@ -40,7 +40,7 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/chdir": "^1.0.0",
+    "@dword-design/chdir": "^1.0.7",
     "execa": "^5.0.0",
     "fs-extra": "^9.0.0",
     "globby": "^11.0.1",

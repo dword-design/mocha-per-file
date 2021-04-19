@@ -1140,6 +1140,11 @@
   resolved "https://registry.yarnpkg.com/@dword-design/chdir/-/chdir-1.0.7.tgz#551a4d2f1d2aedbc75d431bcb8069900722e2d11"
   integrity sha512-sEyQwisdLC/Mt/Mjqzzq9AdOwqB25DAoMB0PJwmkRVgLnEYCv6nZv3Ii5U8FNY9BS/QU9Bv61cej50dffneI/g==
 
+"@dword-design/chdir@^1.0.7":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@dword-design/chdir/-/chdir-1.0.8.tgz#8140aa18b35dbc019cf592819c9df5b5cbd377b9"
+  integrity sha512-Gvvka7vLz43+45Fgqq5PMrpNLYF3XCn1Uske7QmXG4rle1+wXX/bGAedd8hpuyQ06Z8hsVthpxVi30p+ZcQGyA==
+
 "@dword-design/ci@^2.0.0":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@dword-design/ci/-/ci-2.0.2.tgz#e5b47bd45efb544bd717b2176efa845b924ae0f5"
