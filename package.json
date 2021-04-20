@@ -2,23 +2,7 @@
   "name": "mocha-per-file",
   "version": "3.0.7",
   "description": "This CLI tool allows to organize mocha tests in files and directories. It works by traversing the test directory recursively, creating describe blocks per directory and tests per *.test.js file.",
-  "keywords": [
-    "chdir",
-    "cli",
-    "cwd",
-    "describe",
-    "directory",
-    "file",
-    "folder",
-    "it",
-    "manage",
-    "mocha",
-    "organize",
-    "recursive",
-    "test",
-    "testing",
-    "tree"
-  ],
+  "keywords": [],
   "repository": "dword-design/mocha-per-file",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
@@ -57,5 +41,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "homepage": ""
 }
