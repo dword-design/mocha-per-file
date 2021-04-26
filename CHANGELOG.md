@@ -1,3 +1,10 @@
+## [3.0.8](https://github.com/dword-design/mocha-per-file/compare/v3.0.7...v3.0.8) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#51](https://github.com/dword-design/mocha-per-file/issues/51)) ([55c0d87](https://github.com/dword-design/mocha-per-file/commit/55c0d87b4e0ff1af2809019afc028a237a232a5b))
+
 ## [3.0.7](https://github.com/dword-design/mocha-per-file/compare/v3.0.6...v3.0.7) (2021-04-12)
 
 
