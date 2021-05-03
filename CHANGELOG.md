@@ -1,3 +1,19 @@
+# [4.0.0](https://github.com/dword-design/mocha-per-file/compare/v3.0.8...v4.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#54](https://github.com/dword-design/mocha-per-file/issues/54)) ([3323edd](https://github.com/dword-design/mocha-per-file/commit/3323edd8f4affbd9a4f9b02c1ec1d718a48c9aea))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 ## [3.0.8](https://github.com/dword-design/mocha-per-file/compare/v3.0.7...v3.0.8) (2021-04-26)
 
 
