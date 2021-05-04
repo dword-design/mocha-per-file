@@ -42,7 +42,7 @@
   "dependencies": {
     "@dword-design/chdir": "^1.0.0",
     "execa": "^5.0.0",
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^10.0.0",
     "globby": "^11.0.1",
     "make-cli": "^2.0.0",
     "minimatch": "^3.0.4",
