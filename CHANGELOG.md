@@ -1,3 +1,15 @@
+## [4.0.1](https://github.com/dword-design/mocha-per-file/compare/v4.0.0...v4.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/chdir to v2 ([#55](https://github.com/dword-design/mocha-per-file/issues/55)) ([dfee8ca](https://github.com/dword-design/mocha-per-file/commit/dfee8caa31c053f25d130ab3254338724eedf40c))
+* update dependency @dword-design/functions to v4 ([#56](https://github.com/dword-design/mocha-per-file/issues/56)) ([c44cef5](https://github.com/dword-design/mocha-per-file/commit/c44cef5c61d035cb5873688cc2fef7efd1fab44b))
+* update dependency fs-extra to v10 ([#57](https://github.com/dword-design/mocha-per-file/issues/57)) ([fa028f6](https://github.com/dword-design/mocha-per-file/commit/fa028f65ec20957c84e3c4bd4dfc7e85e5b1ae8f))
+* update dependency make-cli to v2 ([#58](https://github.com/dword-design/mocha-per-file/issues/58)) ([b8e36ff](https://github.com/dword-design/mocha-per-file/commit/b8e36ff4c6813366fd2eba07d8502b39fa10ca94))
+* update dependency output-files to v2 ([#59](https://github.com/dword-design/mocha-per-file/issues/59)) ([e1641ce](https://github.com/dword-design/mocha-per-file/commit/e1641cebdf93f72ba4d137b6f7a4ab068ad8176c))
+* update dependency with-local-tmp-dir to v4 ([#60](https://github.com/dword-design/mocha-per-file/issues/60)) ([7fe0abb](https://github.com/dword-design/mocha-per-file/commit/7fe0abb7a21c543ad2de4b0ffaba7731edf9aea7))
+
 # [4.0.0](https://github.com/dword-design/mocha-per-file/compare/v3.0.8...v4.0.0) (2021-05-03)
 
 
