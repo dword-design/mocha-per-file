@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/dword-design/mocha-per-file/compare/v4.0.2...v4.0.3) (2021-06-09)
+
+
+### Bug Fixes
+
+* update dependency mocha to v9 ([#64](https://github.com/dword-design/mocha-per-file/issues/64)) ([ef14417](https://github.com/dword-design/mocha-per-file/commit/ef144177e9aa5823f170c3c8f6024b6babe7c0ce))
+
 ## [4.0.2](https://github.com/dword-design/mocha-per-file/compare/v4.0.1...v4.0.2) (2021-05-28)
 
 
