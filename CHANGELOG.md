@@ -1,3 +1,11 @@
+## [4.0.6](https://github.com/dword-design/mocha-per-file/compare/v4.0.5...v4.0.6) (2021-07-20)
+
+
+### Bug Fixes
+
+* replace forEach with for of ([258efc3](https://github.com/dword-design/mocha-per-file/commit/258efc3bb2540cee7792bb9552af6e2c528d4ba6))
+* update config files ([3f96c7f](https://github.com/dword-design/mocha-per-file/commit/3f96c7f8d729b8c48bdacfb5d7386027b958af26))
+
 ## [4.0.5](https://github.com/dword-design/mocha-per-file/compare/v4.0.4...v4.0.5) (2021-07-06)
 
 
