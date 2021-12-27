@@ -3,7 +3,7 @@
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-  <p>
+<p>
     <a href="https://npmjs.org/package/mocha-per-file">
       <img
         src="https://img.shields.io/npm/v/mocha-per-file.svg"
