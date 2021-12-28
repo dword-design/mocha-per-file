@@ -1,3 +1,10 @@
+## [4.0.7](https://github.com/dword-design/mocha-per-file/compare/v4.0.6...v4.0.7) (2021-12-28)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#94](https://github.com/dword-design/mocha-per-file/issues/94)) ([4649f56](https://github.com/dword-design/mocha-per-file/commit/4649f5665cca930759d61da049044547d55a0046))
+
 ## [4.0.6](https://github.com/dword-design/mocha-per-file/compare/v4.0.5...v4.0.6) (2021-07-20)
 
 
