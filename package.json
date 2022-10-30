@@ -51,7 +51,7 @@
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
     "@dword-design/functions": "^4.0.0",
-    "escape-string-regexp": "^4.0.0",
+    "escape-string-regexp": "^5.0.0",
     "output-files": "^2.0.0",
     "with-local-tmp-dir": "^4.0.0"
   },
